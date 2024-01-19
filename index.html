@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -16,26 +18,39 @@
     <div class="weather-app">
         <header>
             <form>
-                <input type="text" placeholder="Enter your city..." required class="city-text">
-                <input type="submit" value="Search" class="submit-button">
+                <input type="text" placeholder="📍Enter your city..." required class="city-text">
+                <input type="submit" value="🔍Search" class="submit-button">
             </form>
         </header>
         <main>
             <h1>
-                Johannesburg
-                🌤️26 ℃
+        
+                <div class="city">
+                    Johannesburg
+                </div>
+                <div class="material-symbols-outlined">
+                    partly_cloudy_day
+                </div>
+                <div class="temp">
+                    26
+                </div>
+                <div class="unit">
+                    ℃
+                </div>
             </h1>
-            <p>
-                Thurs 18 Jan 2024 12:31
-                <br />
-                Mostly sunny
-                <br />
-                Precipation: <strong>54%</strong>
-                <br />
-                Humidy: <strong>85%</strong>
-                <br />
-                Windspeed: <strong>7.2km/h</strong>
-            </p>
+            <div class="weather-app-conditions">
+                <p>
+                    Thurs 18 Jan 2024 12:31
+                    <br />
+                    Mostly sunny
+                    <br />
+                    Precipation: <strong>54%</strong>
+                    <br />
+                    Humidy: <strong>85%</strong>
+                    <br />
+                    Windspeed: <strong>7.2km/h</strong>
+                </p>
+            </div>
         </main>
         <hr />
         <footer>

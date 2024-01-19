@@ -5,4 +5,11 @@ body {
   margin: 25px;
   padding: 25px;
   border-radius: 5px;
+  font-family: "Asap Condensed", sans-serif;
+}
+
+footer {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }

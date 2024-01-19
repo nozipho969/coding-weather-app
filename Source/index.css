@@ -15,9 +15,21 @@ footer {
 }
 
 .weather-app {
-  background: linear-gradient(179.7deg, rgb(248, 126, 126) -0.5%, rgb(251, 206, 143) 35.3%, rgb(184, 252, 233) 67.2%, rgb(118, 162, 229) 92.3%);
+  background: linear-gradient(
+    179.7deg,
+    rgb(248, 126, 126) -0.5%,
+    rgb(251, 206, 143) 35.3%,
+    rgb(184, 252, 233) 67.2%,
+    rgb(118, 162, 229) 92.3%
+  );
   padding: 25px;
   margin: 10px;
   border-radius: 5px;
   border-color: rgb(238, 176, 238);
+}
+
+.city-text {
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 15px 20px;
 }

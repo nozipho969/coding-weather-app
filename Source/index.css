@@ -84,7 +84,9 @@ strong {
 }
 
 .material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
+  padding: -10px 20px;
+  margin: 10px 40px;
 }
 
 .unit {
@@ -94,15 +96,16 @@ strong {
 
 .temp {
   font-size: 88px;
-  line-height: 88px;
+  line-height: 48px;
   font-weight: bold;
+  margin-top: 25px;
 }
 
 h1 {
   display: flex;
+  margin-left: 10px;
 }
 
 .weather-container {
-  display: flex;
-  justify-content: space-between;
+  display: block;
 }

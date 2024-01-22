@@ -67,6 +67,7 @@ form {
 .city {
   font-size: 46px;
   font-weight: 1200;
+  margin: 0;
 }
 
 strong {
@@ -83,7 +84,7 @@ strong {
 }
 
 .material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
 .unit {
@@ -99,5 +100,9 @@ strong {
 
 h1 {
   display: flex;
-  justify-content: space-around;
+}
+
+.weather-container {
+  display: flex;
+  justify-content: space-between;
 }

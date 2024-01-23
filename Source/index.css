@@ -2,6 +2,7 @@ body {
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/111/078/original/mirror.svg.jpg?1705589062");
   background-size: cover;
   background-position: center;
+  background-repeat: no repeat;
   margin: 25px;
   padding: 25px;
   border-radius: 5px;

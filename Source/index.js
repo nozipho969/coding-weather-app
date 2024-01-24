@@ -22,4 +22,4 @@ function handleTextSubmit(event) {
 let textFormElement = document.querySelector("#search-form");
 textFormElement.addEventListener("submit", handleTextSubmit);
 
-searchCity("Sandton");
+checkOwnCity("Sandton");

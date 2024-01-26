@@ -8,6 +8,7 @@ function displayWeather(response) {
   let feelsLikeElement = document.querySelector("#feels-like");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#weather-icon");
 
   cityElement.innerHTML = response.data.city;
 
@@ -17,6 +18,7 @@ function displayWeather(response) {
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   feelsLikeElement.innerHTML = `${response.data.temperature.feels_like}°`;
   temperatureElement.innerHTML = Math.round(temperature);
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="description-icon" />`;
 }
 
 function formateDate(date) {
@@ -68,6 +70,7 @@ function checkOwnCity(city) {
 function handleTextSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-form-input");
+
   checkOwnCity(searchInput.value);
 }
 

@@ -86,10 +86,9 @@ strong {
   display: flex;
 }
 
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 48;
-  padding: -10px 20px;
-  margin: 35px 40px;
+.description-icon {
+  width: 88px;
+  height: 88px;
 }
 
 .unit {

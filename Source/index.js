@@ -6,14 +6,12 @@ function displayWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
   let feelsLikeElement = document.querySelector("#feels-like");
-let timeElement = document.querySelector("#time");
-let date = new Date(response.data.time *1000);
-
-  console.log(response.data);
+  let timeElement = document.querySelector("#time");
+  let date = new Date(response.data.time * 1000);
 
   cityElement.innerHTML = response.data.city;
 
-  timeElement.innerHTML = `${date.getDay()} ${date.getHours()}:${date.getMinutes()};
+  timeElement.innerHTML = formateDate(date);
   conditionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
@@ -22,13 +20,36 @@ let date = new Date(response.data.time *1000);
 }
 
 function formateDate(date) {
-let day = date.getDay();
-let minutes = date.getMinutes();
-let hours = date.getHours();
+  let year = date.getFullYear();
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "June",
+    "Jul",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let month = months[date.getMonth()];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    " Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
 
-
-let days = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
-
+  return `${month} ${year} ${day} ${hours}:${minutes}`;
 }
 
 function checkOwnCity(city) {

@@ -49,6 +49,13 @@ function formateDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
 
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
   return `${month} ${year} ${day} ${hours}:${minutes}`;
 }
 

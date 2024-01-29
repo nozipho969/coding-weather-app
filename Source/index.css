@@ -103,6 +103,15 @@ strong {
   margin-top: 25px;
 }
 
+.week-forecast {
+  margin-top: 20px;
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+.day-forecast {
+}
+
 footer {
   font-size: 12px;
   font-family: monospace;

@@ -74,7 +74,31 @@ function handleTextSubmit(event) {
   checkOwnCity(searchInput.value);
 }
 
+function showWeekForecast() {
+  let days = ["Tues", "Wed", "Thurs", "Fri", "Sat"];
+  let weekForecastHtml = "";
+
+  days.forEach(function (day) {
+    weekForecastHtml =
+      weekForecastHtml +
+      `
+    <div class="day-forecast">
+    <div class="week-forecast-date">${day}</div>
+    <div class="day-forecast-icon">🌤️</div>
+    <div class="week-forecast-temperatures">
+    <div class="week-forecast-temperature-max">
+    <strong> 26°</strong></div>
+    <div class="week-forecast-temperature-min"> 10° </div>
+    </div>
+    </div>
+    `;
+  });
+  let weekForecastElement = document.querySelector("#week-forecast");
+  weekForecastElement.innerHTML = weekForecastHtml;
+}
+
 let textFormElement = document.querySelector("#search-form");
 textFormElement.addEventListener("submit", handleTextSubmit);
 
 checkOwnCity("Sandton");
+showWeekForecast();

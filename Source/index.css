@@ -104,12 +104,11 @@ strong {
 }
 
 .week-forecast {
+  display: flex;
+  justify-content: space-around;
   margin-top: 20px;
   opacity: 0.8;
   font-size: 14px;
-}
-
-.day-forecast {
 }
 
 footer {

@@ -15,8 +15,10 @@ function displayWeather(response) {
   timeElement.innerHTML = formateDate(date);
   conditionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
-  feelsLikeElement.innerHTML = `${response.data.temperature.feels_like}°`;
+  windSpeedElement.innerHTML = `${Math.round(response.data.wind.speed)}km/h`;
+  feelsLikeElement.innerHTML = `${Math.round(
+    response.data.temperature.feels_like
+  )}°`;
   temperatureElement.innerHTML = Math.round(temperature);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="description-icon" />`;
 
@@ -76,6 +78,13 @@ function handleTextSubmit(event) {
   checkOwnCity(searchInput.value);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
 function fetchWeekForecast(city) {
   let apiKey = "6ca646t4occ4350eb99fb0c373d683b4";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
@@ -83,26 +92,28 @@ function fetchWeekForecast(city) {
 }
 
 function showWeekForecast(response) {
-  console.log(response.data);
-
-  let days = ["Tues", "Wed", "Thurs", "Fri", "Sat"];
   let weekForecastHtml = "";
 
-  days.forEach(function (day) {
-    weekForecastHtml =
-      weekForecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      weekForecastHtml =
+        weekForecastHtml +
+        `
     <div class="day-forecast">
-    <div class="week-forecast-date">${day}</div>
-    <div class="day-forecast-icon">🌤️</div>
+    <div class="week-forecast-date">${formatDay(day.time)}</div>
+    <img src ="${day.condition.icon_url}" class="day-forecast-icon />
     <div class="week-forecast-temperatures">
     <div class="week-forecast-temperature-max">
-    <strong> 26°</strong></div>
-    <div class="week-forecast-temperature-min"> 10° </div>
+    <strong> ${Math.round(day.temperature.maximum)}°</strong></div>
+    <div class="week-forecast-temperature-min"> ${Math.round(
+      day.temperature.minimum
+    )}° </div>
     </div>
     </div>
     `;
+    }
   });
+
   let weekForecastElement = document.querySelector("#week-forecast");
   weekForecastElement.innerHTML = weekForecastHtml;
 }
@@ -111,4 +122,3 @@ let textFormElement = document.querySelector("#search-form");
 textFormElement.addEventListener("submit", handleTextSubmit);
 
 checkOwnCity("Sandton");
-showWeekForecast();

@@ -105,18 +105,21 @@ strong {
 
 .week-forecast {
   display: flex;
-  justify-content: space-around;
   margin-top: 20px;
+  margin-left: 30px;
   opacity: 0.8;
-  font-size: 18px;
+  font-size: 16px;
 }
 
-.week-forecast-temperatures {
-  display: flex;
-  justify-content: space-between;
+.day-forecast-icon {
+  width: fit-content;
+  position: relative;
+  top: 10px;
+  left: -40px;
 }
-.week-forecast-temperatures {
-  margin: 10px 0 auto;
+
+.week-forecast-temperature-min {
+  padding: 10px;
 }
 
 footer {

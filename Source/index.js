@@ -103,11 +103,11 @@ function showWeekForecast(response) {
     <div class="week-forecast-date">${formatDay(day.time)}</div>
     <img src ="${day.condition.icon_url}" class="day-forecast-icon />
     <div class="week-forecast-temperatures">
-    <div class="week-forecast-temperature-max">
-    <strong> ${Math.round(day.temperature.maximum)}°</strong></div>
-    <div class="week-forecast-temperature-min"> ${Math.round(
+    <span class="week-forecast-temperature-max">
+    <strong> ${Math.round(day.temperature.maximum)}°</strong></span>
+    <span class="week-forecast-temperature-min"> ${Math.round(
       day.temperature.minimum
-    )}° </div>
+    )}° </span>
     </div>
     </div>
     `;

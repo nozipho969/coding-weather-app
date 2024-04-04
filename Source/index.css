@@ -130,3 +130,21 @@ footer {
   color: rgba(20, 18, 29, 0.4);
   padding: 10px -5px;
 }
+
+@media screen and (max-width: 768px) {
+  .temp {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 768px) {
+  .submit-button.btn.btn-primary.btn-block, .city-search.form-control {
+display: inline-block;
+width: auto;
+margin-top: 0;
+  }
+
+  .city-search.form-control {
+    margin-left: 10px;
+  }
+}

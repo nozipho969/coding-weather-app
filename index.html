@@ -21,13 +21,21 @@
 <body>
 <div class="container">
     <div class="weather-app">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
         <header>
+            <div class="form-group">
             <form id="search-form">
                 <input type="search" placeholder="📍Enter your city..." required id="search-form-input"
-                    class="city-search">
-                <input type="submit" value="🔍Search" class="submit-button">
+                    class="form-control city-search">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="🔍Search" class="btn btn-primary btn-block submit-button">
+           </div>
             </form>
         </header>
+    </div>
+        </div>
         <main>
             <div class="weather-container">
                 <div>
